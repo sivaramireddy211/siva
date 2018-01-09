@@ -1,0 +1,8 @@
+node {
+   stage 'CHECKOUT'
+   echo 'Hello World'
+   checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/sivaramireddy211/siva.git']]])
+
+    stage 'BUILD'
+    echo 'build stage'
+}
